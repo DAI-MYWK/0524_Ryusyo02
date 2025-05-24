@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>琉翔株式会社 | お客様と共に成長する企業</title>
+    <meta
+      name="description"
+      content="琉翔株式会社は信頼・可能性・安心をモットーに倉庫業、EC保管・発送業務、輸送業など多岐にわたる事業を展開しています。"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  </head>
+  <body>
+    <!-- ナビゲーション -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="img/header-logo1.png" alt="琉翔株式会社" />
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#top">TOP</a></li>
+          <li><a href="#about">企業理念</a></li>
+          <li><a href="#business">事業内容</a></li>
+          <li><a href="#mission">ミッション</a></li>
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#facilities">拠点・施設</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 1. ヒーローセクション -->
+    <section id="top" class="hero-section">
+      <div class="hero-background">
+        <div class="world-map-container">
+          <svg
+            class="world-map"
+            viewBox="0 0 1000 500"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- 簡略化された世界地図 -->
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- アジア地域 -->
+            <path
+              id="china"
+              d="M650 150 L720 140 L750 180 L720 220 L680 200 Z"
+              fill="rgba(220,38,38,0.6)"
+              stroke="#dc2626"
+              stroke-width="2"
+            />
+            <path
+              id="vietnam"
+              d="M680 220 L700 250 L690 280 L670 270 L675 240 Z"
+              fill="rgba(220,38,38,0.6)"
+              stroke="#dc2626"
+              stroke-width="2"
+            />
+            <path
+              id="thailand"
+              d="M650 250 L670 270 L665 290 L645 285 L650 270 Z"
+              fill="rgba(220,38,38,0.6)"
+              stroke="#dc2626"
+              stroke-width="2"
+            />
+
+            <!-- 日本 -->
+            <path
+              id="japan"
+              d="M780 180 L800 170 L820 185 L815 210 L790 205 Z"
+              fill="#dc2626"
+              stroke="#dc2626"
+              stroke-width="3"
+              filter="url(#glow)"
+            />
+
+            <!-- その他の大陸（薄く表示） -->
+            <path
+              d="M100 200 L200 180 L300 220 L250 280 L150 270 Z"
+              fill="rgba(100,100,100,0.2)"
+              stroke="rgba(100,100,100,0.3)"
+            />
+            <path
+              d="M200 300 L350 290 L400 350 L300 380 L180 360 Z"
+              fill="rgba(100,100,100,0.2)"
+              stroke="rgba(100,100,100,0.3)"
+            />
+
+            <!-- 接続線（アニメーション用） -->
+            <g class="connection-lines">
+              <line
+                class="connection-line"
+                x1="800"
+                y1="190"
+                x2="700"
+                y2="160"
+                stroke="#ef4444"
+                stroke-width="3"
+                opacity="0"
+              />
+              <line
+                class="connection-line"
+                x1="800"
+                y1="190"
+                x2="690"
+                y2="250"
+                stroke="#ef4444"
+                stroke-width="3"
+                opacity="0"
+              />
+              <line
+                class="connection-line"
+                x1="800"
+                y1="190"
+                x2="655"
+                y2="270"
+                stroke="#ef4444"
+                stroke-width="3"
+                opacity="0"
+              />
+            </g>
+
+            <!-- パーティクル用の円 -->
+            <g class="particles">
+              <circle
+                class="particle"
+                cx="750"
+                cy="175"
+                r="3"
+                fill="#fbbf24"
+                opacity="0"
+              />
+              <circle
+                class="particle"
+                cx="745"
+                cy="220"
+                r="3"
+                fill="#fbbf24"
+                opacity="0"
+              />
+              <circle
+                class="particle"
+                cx="720"
+                cy="260"
+                r="3"
+                fill="#fbbf24"
+                opacity="0"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="floating-elements">
+          <div class="floating-box" data-speed="2">物流</div>
+          <div class="floating-box" data-speed="1.5">貿易</div>
+          <div class="floating-box" data-speed="2.5">EC</div>
+          <div class="floating-box" data-speed="1.8">倉庫</div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">アジア総合物流商社</div>
+        <h1 class="hero-title">
+          <span class="title-line1">海外から国内へ</span>
+          <span class="title-line2">一貫物流システム</span>
+        </h1>
+        <p class="hero-subtitle">
+          中国・ベトナム・東南アジア全域から日本市場へ<br />
+          <strong>完全社内対応</strong>でお客様の物流を革新します
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">社内対応</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24H</div>
+            <div class="stat-label">サポート</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3Countries</div>
+            <div class="stat-label">直接拠点</div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="cta-button primary">
+            一貫物流を相談する
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M8 1L15 8L8 15M15 8H1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a href="#about" class="cta-button secondary">物流システムを見る</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 2. 企業理念セクション -->
+    <section id="about" class="philosophy-section">
+      <div class="philosophy-bg-environment">
+        <div class="philosophy-floating-elements">
+          <div class="floating-text" data-text="信頼">信頼</div>
+          <div class="floating-text" data-text="可能性">可能性</div>
+          <div class="floating-text" data-text="安心">安心</div>
+          <div class="floating-text" data-text="成長">成長</div>
+          <div class="floating-text" data-text="革新">革新</div>
+        </div>
+        <div class="philosophy-particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="philosophy-hero-layout">
+          <div class="philosophy-content">
+            <div class="philosophy-badge">Corporate Philosophy</div>
+            <h2 class="philosophy-hero-title">企業理念</h2>
+            <h3 class="philosophy-motto">信頼・可能性・安心</h3>
+            <div class="philosophy-description">
+              <p class="philosophy-vision">お客様と共に成長する企業</p>
+              <p class="philosophy-goal">グローバル企業への成長</p>
+            </div>
+            <div class="philosophy-stats">
+              <div class="stat-box">
+                <div class="stat-number">2017</div>
+                <div class="stat-label">設立年</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">7</div>
+                <div class="stat-label">事業年数</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">8</div>
+                <div class="stat-label">事業領域</div>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-visual">
+            <div class="philosophy-image-enhanced">
+              <img src="img/service-img02.webp" alt="企業理念" />
+              <div class="image-overlay-enhanced"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ミッションセクション -->
+    <section id="mission" class="mission-section">
+      <div class="mission-background-images">
+        <div class="bg-image bg-image-1">
+          <img src="img/service-img02.webp" alt="ミッション背景1" />
+        </div>
+        <div class="bg-image bg-image-2">
+          <img src="img/service-img03.webp" alt="ミッション背景2" />
+        </div>
+        <div class="bg-image bg-image-3">
+          <img src="img/service-img04.webp" alt="ミッション背景3" />
+        </div>
+      </div>
+      <div class="mission-overlay"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title white">ミッション</h2>
+          <p class="section-subtitle white">Our Mission</p>
+        </div>
+        <div class="mission-grid-horizontal">
+          <div class="mission-item tilted-left">
+            <div class="mission-background-photo">
+              <img src="img/service-img05.webp" alt="課題解決" />
+            </div>
+            <div class="mission-content">
+              <div class="mission-icon">01</div>
+              <h4>課題解決企業</h4>
+              <p>お客様から頂いた課題をあらゆる方向から分析し解決できる企業</p>
+            </div>
+          </div>
+          <div class="mission-item tilted-right">
+            <div class="mission-background-photo">
+              <img src="img/service-img06.webp" alt="安心サービス" />
+            </div>
+            <div class="mission-content">
+              <div class="mission-icon">02</div>
+              <h4>安心サービス</h4>
+              <p>お客様が安心して依頼できるサービスの提供</p>
+            </div>
+          </div>
+          <div class="mission-item tilted-left">
+            <div class="mission-background-photo">
+              <img src="img/service-img07.webp" alt="チーム力" />
+            </div>
+            <div class="mission-content">
+              <div class="mission-icon">03</div>
+              <h4>チーム力</h4>
+              <p>
+                目の前の問題にチームで考え、実行し諦める事が選択肢にない企業を目指す
+              </p>
+            </div>
+          </div>
+          <div class="mission-item tilted-right">
+            <div class="mission-background-photo">
+              <img src="img/service-img02.webp" alt="信頼関係" />
+            </div>
+            <div class="mission-content">
+              <div class="mission-icon">04</div>
+              <h4>信頼関係</h4>
+              <p>お客様を第一に考え相互の信頼関係を築く</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 一貫物流システムセクション -->
+    <section id="business" class="business-section-hero">
+      <div class="business-hero-background">
+        <div class="business-particles">
+          <div class="business-particle"></div>
+          <div class="business-particle"></div>
+          <div class="business-particle"></div>
+          <div class="business-particle"></div>
+          <div class="business-particle"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <div class="business-badge">Integrated Logistics</div>
+          <h2 class="section-title white">一貫物流システム</h2>
+          <p class="section-subtitle white">
+            海外から国内まで、すべてを社内で完結
+          </p>
+        </div>
+
+        <div class="business-hero-content">
+          <div class="business-flow-cards">
+            <div class="flow-card overseas">
+              <div class="card-bg-overlay"></div>
+              <div class="card-content">
+                <div class="card-badge">OVERSEAS</div>
+                <h3>海外直接拠点</h3>
+                <p>
+                  中国・ベトナム現地法人で完全社内管理。リアルタイム在庫システムと現地スタッフによる品質管理を実現。
+                </p>
+                <div class="card-stats">
+                  <div class="mini-stat">
+                    <span class="mini-number">2</span>
+                    <span class="mini-label">ヶ国拠点</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="mini-number">24h</span>
+                    <span class="mini-label">監視体制</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flow-card transport">
+              <div class="card-bg-overlay"></div>
+              <div class="card-content">
+                <div class="card-badge">TRANSPORT</div>
+                <h3>国際輸送</h3>
+                <p>
+                  海上・航空輸送を最適に組み合わせ、コストと納期のバランスを追求。通関手続きもワンストップで対応。
+                </p>
+                <div class="card-stats">
+                  <div class="mini-stat">
+                    <span class="mini-number">複数</span>
+                    <span class="mini-label">輸送ルート</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="mini-number">迅速</span>
+                    <span class="mini-label">通関対応</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flow-card domestic">
+              <div class="card-bg-overlay"></div>
+              <div class="card-content">
+                <div class="card-badge">DOMESTIC</div>
+                <h3>国内物流拠点</h3>
+                <p>
+                  総面積1,130坪の物流センター。館林・新狭山の2拠点で関東圏をカバーし、効率的な配送を実現。
+                </p>
+                <div class="card-stats">
+                  <div class="mini-stat">
+                    <span class="mini-number">1,130</span>
+                    <span class="mini-label">坪</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="mini-number">2</span>
+                    <span class="mini-label">拠点</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flow-card delivery">
+              <div class="card-bg-overlay"></div>
+              <div class="card-content">
+                <div class="card-badge">DELIVERY</div>
+                <h3>EC一貫対応</h3>
+                <p>
+                  Amazon・楽天市場対応の発送システム。注文から配送まで、ECに特化したワンストップサービス。
+                </p>
+                <div class="card-stats">
+                  <div class="mini-stat">
+                    <span class="mini-number">EC</span>
+                    <span class="mini-label">特化</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="mini-number">即日</span>
+                    <span class="mini-label">発送</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="business-bottom-stats">
+            <div class="bottom-stat-item">
+              <div class="stat-number-large">100%</div>
+              <div class="stat-label-large">社内完結</div>
+            </div>
+            <div class="bottom-stat-item">
+              <div class="stat-number-large">0</div>
+              <div class="stat-label-large">外注依存</div>
+            </div>
+            <div class="bottom-stat-item">
+              <div class="stat-number-large">∞</div>
+              <div class="stat-label-large">可能性</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. サービス詳細セクション -->
+    <section id="service" class="service-section-hero">
+      <div class="service-hero-background">
+        <div class="service-particles">
+          <div class="service-particle"></div>
+          <div class="service-particle"></div>
+          <div class="service-particle"></div>
+          <div class="service-particle"></div>
+          <div class="service-particle"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <div class="service-badge">Diverse Business</div>
+          <h2 class="section-title white">多様なサービス</h2>
+          <p class="section-subtitle white">物流を超えた総合事業展開</p>
+        </div>
+        <div class="service-hero-content">
+          <div class="service-premium-cards">
+            <div class="premium-card beauty">
+              <div class="premium-bg-overlay"></div>
+              <div class="premium-content">
+                <div class="premium-badge">BEAUTY</div>
+                <h3>エステ事業</h3>
+                <p>
+                  埼玉県川口市を拠点に4店舗のエステサロンを運営。美と健康を提供する地域密着型サービス。
+                </p>
+                <div class="premium-stats">
+                  <div class="premium-stat">
+                    <span class="premium-number">4</span>
+                    <span class="premium-label">店舗</span>
+                  </div>
+                  <div class="premium-stat">
+                    <span class="premium-number">川口</span>
+                    <span class="premium-label">エリア</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="premium-card food">
+              <div class="premium-bg-overlay"></div>
+              <div class="premium-content">
+                <div class="premium-badge">FOOD</div>
+                <h3>食品卸事業</h3>
+                <p>
+                  食品の卸売りから小売まで幅広く対応。品質管理と安定供給で食の安心をお届けします。
+                </p>
+                <div class="premium-stats">
+                  <div class="premium-stat">
+                    <span class="premium-number">卸売</span>
+                    <span class="premium-label">～小売</span>
+                  </div>
+                  <div class="premium-stat">
+                    <span class="premium-number">安心</span>
+                    <span class="premium-label">品質</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="premium-card trade">
+              <div class="premium-bg-overlay"></div>
+              <div class="premium-content">
+                <div class="premium-badge">TRADE</div>
+                <h3>貿易・国際物流</h3>
+                <p>
+                  国際的な物流ネットワークを活用し、グローバルな貿易業務をサポート。世界とつながるパートナーシップ。
+                </p>
+                <div class="premium-stats">
+                  <div class="premium-stat">
+                    <span class="premium-number">国際</span>
+                    <span class="premium-label">ネットワーク</span>
+                  </div>
+                  <div class="premium-stat">
+                    <span class="premium-number">世界</span>
+                    <span class="premium-label">とつながる</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="premium-card ec">
+              <div class="premium-bg-overlay"></div>
+              <div class="premium-content">
+                <div class="premium-badge">E-COMMERCE</div>
+                <h3>EC販売</h3>
+                <p>
+                  Amazon、楽天市場での販売展開。ECプラットフォームを活用した効率的な販売戦略。
+                </p>
+                <div class="premium-stats">
+                  <div class="premium-stat">
+                    <span class="premium-number">Amazon</span>
+                    <span class="premium-label">楽天</span>
+                  </div>
+                  <div class="premium-stat">
+                    <span class="premium-number">効率</span>
+                    <span class="premium-label">販売</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 拠点・施設セクション -->
+    <section id="facilities" class="facilities-section-modern">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">拠点・施設</h2>
+          <p class="section-subtitle">Locations & Facilities</p>
+        </div>
+        <div class="facilities-modern-grid">
+          <div class="facility-modern-card headquarters">
+            <div class="facility-icon-modern">🏢</div>
+            <div class="facility-content-modern">
+              <h3>本店</h3>
+              <div class="address-info">
+                <p>〒336-0042<br />埼玉県さいたま市南区大谷口625-3</p>
+              </div>
+              <div class="facility-features">
+                <span class="feature-tag">本社機能</span>
+                <span class="feature-tag">管理部門</span>
+              </div>
+            </div>
+            <div class="facility-image-bg">
+              <img src="img/service-img07.webp" alt="本店" />
+            </div>
+          </div>
+
+          <div class="facility-modern-card logistics-center">
+            <div class="facility-icon-modern">🏭</div>
+            <div class="facility-content-modern">
+              <h3>館林物流センター</h3>
+              <div class="address-info">
+                <p>〒374-0013<br />群馬県館林市赤生田町657-3</p>
+              </div>
+              <div class="facility-features">
+                <span class="feature-tag">550坪</span>
+                <span class="feature-tag">高床ホーム</span>
+                <span class="feature-tag">高さ5.5m</span>
+                <span class="feature-tag">館林ICから2km</span>
+              </div>
+            </div>
+            <div class="facility-image-bg">
+              <img src="img/service-img02.webp" alt="館林物流センター" />
+            </div>
+          </div>
+
+          <div class="facility-modern-card logistics-center">
+            <div class="facility-icon-modern">📦</div>
+            <div class="facility-content-modern">
+              <h3>新狭山物流センター</h3>
+              <div class="address-info">
+                <p>
+                  〒350-1331<br />埼玉県狭山市新狭山1-13-3<br />ロジベース新狭山4F
+                </p>
+              </div>
+              <div class="facility-features">
+                <span class="feature-tag">580坪</span>
+                <span class="feature-tag">4F</span>
+                <span class="feature-tag">EC対応</span>
+              </div>
+            </div>
+            <div class="facility-image-bg">
+              <img src="img/service-img03.webp" alt="新狭山物流センター" />
+            </div>
+          </div>
+
+          <div class="facility-modern-card office">
+            <div class="facility-icon-modern">🏢</div>
+            <div class="facility-content-modern">
+              <h3>西川口オフィス</h3>
+              <div class="address-info">
+                <p>
+                  〒332-0021<br />埼玉県川口市西川口1-22-1<br />仁志第二コーポ602
+                </p>
+              </div>
+              <div class="facility-features">
+                <span class="feature-tag">営業拠点</span>
+                <span class="feature-tag">顧客対応</span>
+              </div>
+            </div>
+            <div class="facility-image-bg">
+              <img src="img/service-img04.webp" alt="西川口オフィス" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 会社概要セクション -->
+    <section id="company" class="company-section">
+      <div class="company-background">
+        <div class="company-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title white">会社概要</h2>
+          <p class="section-subtitle white">Company Overview</p>
+        </div>
+        <div class="company-info">
+          <div class="company-details">
+            <div class="detail-item">
+              <dt>会社名</dt>
+              <dd>琉翔株式会社</dd>
+            </div>
+            <div class="detail-item">
+              <dt>英語表記</dt>
+              <dd>Ryu-Syou Co., Ltd.</dd>
+            </div>
+            <div class="detail-item">
+              <dt>設立日</dt>
+              <dd>平成29年3月28日（2017年）</dd>
+            </div>
+            <div class="detail-item">
+              <dt>代表取締役</dt>
+              <dd>津本 君美子</dd>
+            </div>
+            <div class="detail-item">
+              <dt>税務顧問</dt>
+              <dd>ARK税理士事務所</dd>
+            </div>
+            <div class="detail-item">
+              <dt>ウェブサイト</dt>
+              <dd>
+                <a href="https://ryu-syou.co.jp" target="_blank"
+                  >https://ryu-syou.co.jp</a
+                >
+              </dd>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. お問い合わせセクション -->
+    <section id="contact" class="contact-section-form">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-subtitle">Contact Us</p>
+        </div>
+        <div class="contact-form-container">
+          <div class="contact-intro">
+            <h3>一貫物流システムについて<br />お気軽にご相談ください</h3>
+            <p>
+              海外調達から国内配送まで、物流のお悩みを解決いたします。<br />まずはお気軽にお問い合わせください。
+            </p>
+          </div>
+
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="company"
+                >会社名 <span class="required">*</span></label
+              >
+              <input type="text" id="company" name="company" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">お名前 <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email"
+                  >メールアドレス <span class="required">*</span></label
+                >
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">お問い合わせ内容</label>
+              <select id="subject" name="subject">
+                <option value="">選択してください</option>
+                <option value="logistics">一貫物流システムについて</option>
+                <option value="overseas">海外拠点について</option>
+                <option value="domestic">国内物流について</option>
+                <option value="ec">EC発送業務について</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message"
+                >メッセージ <span class="required">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="ご相談内容をお聞かせください"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="submit-button">
+                お問い合わせを送信
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18 7L10 12L2 7M18 7V15C18 15.5523 17.5523 16 17 16H3C2.44772 16 2 15.5523 2 15V7M18 7L17 4H3L2 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="contact-alternative">
+            <p>または直接メールでお問い合わせください</p>
+            <a href="mailto:info@ryu-syou.co.jp" class="email-link"
+              >info@ryu-syou.co.jp</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="img/footer-logo1.png" alt="琉翔株式会社" />
+            <p>信頼・可能性・安心</p>
+          </div>
+          <div class="footer-info">
+            <h4>琉翔株式会社</h4>
+            <p>〒336-0042<br />埼玉県さいたま市南区大谷口625-3</p>
+            <p>
+              <a href="https://ryu-syou.co.jp" target="_blank"
+                >https://ryu-syou.co.jp</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 琉翔株式会社. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
